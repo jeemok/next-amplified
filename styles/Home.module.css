@@ -1,5 +1,9 @@
 .container {
   padding: 0 2rem;
+  background-image: url(https://lms.gift-ed.com/static/gifted_theme/images/login-reg-bg.8900416d4f85.jpg);
+  background-position: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main {

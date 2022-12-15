@@ -77,7 +77,7 @@ export default function Home({ posts = [] }) {
           <div className={styles.card}>
             <h3 className={styles.title}>New Post</h3>
 
-            <Authenticator>
+            <Authenticator hideSignUp>
               <form onSubmit={handleCreatePost}>
                 <fieldset>
                   <legend>Title</legend>

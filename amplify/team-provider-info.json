@@ -13,10 +13,24 @@
     },
     "categories": {
       "auth": {
-        "nextamplified418ca46f": {}
+        "nextamplified418ca46f": {},
+        "userPoolGroups": {}
       },
       "api": {
-        "nextamplified": {}
+        "nextamplified": {},
+        "AdminQueries": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2qgl9zrr6t4py",
+          "type": "cicd"
+        }
+      },
+      "function": {
+        "AdminQueriesd4706564": {
+          "deploymentBucketName": "amplify-nextamplified-dev-161253-deployment",
+          "s3Key": "amplify-builds/AdminQueriesd4706564-74796a66505531687843-build.zip"
+        }
       }
     }
   }

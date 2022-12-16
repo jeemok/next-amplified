@@ -15,12 +15,19 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+
+.amplify-loader--linear {
+  stroke-width: 5px !important;
+}
+
+div.amplify-collection > div.amplify-flex > p {
+  color: white;
+}
+
+.amplify-collection-search {
+  margin-bottom: 30px !important;
+}
+
+.amplify-collection-search > div > div > div > input.amplify-input {
+  background: white;
 }

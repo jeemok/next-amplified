@@ -1,6 +1,9 @@
 .container {
   padding: 0 2rem;
-  background: black;
+  background-image: url(https://lms.gift-ed.com/static/gifted_theme/images/login-reg-bg.8900416d4f85.jpg);
+  background-position: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -8,7 +11,6 @@
   padding: 4rem 0;
   flex: 1;
   display: flex;
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -108,24 +110,4 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
 }

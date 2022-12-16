@@ -13,7 +13,7 @@ import { Amplify } from "aws-amplify";
 import Head from "next/head";
 import React from "react";
 import awsExports from "../src/aws-exports";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Login.module.css";
 
 Amplify.configure({ ...awsExports, ssr: true });
 

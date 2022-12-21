@@ -12,9 +12,12 @@ import {
     Icon,
   } from "@aws-amplify/ui-react";
   import { MdAccessTimeFilled } from "react-icons/md";
-  import Header from "../../src/components/Header";
+  import Header from "../../src/components/Navigation/Header";
+  import { getServerSideProps } from '../../src/helpers/enrollment-auth';
   
   import React, { useTransition } from "react";
+
+  export { getServerSideProps};
   
   const items = [
     {

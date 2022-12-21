@@ -1,12 +1,12 @@
 // pages/index.js
 import { Amplify, API, withSSRContext } from "aws-amplify";
 import Head from "next/head";
-import awsExports from "../../src/aws-exports";
-import { createPost } from "../../src/graphql/mutations";
-import { listPosts } from "../../src/graphql/queries";
+import awsExports from "../src/aws-exports";
+import { createPost } from "../src/graphql/mutations";
+import { listPosts } from "../src/graphql/queries";
 import styles from "../styles/Home.module.css";
-import Header from "../../src/components/Header";
-import CourseList from "../../src/containers/Dashboard/CourseList";
+
+import CourseList from "../src/containers/Dashboard/CourseList";
 
 Amplify.configure({ ...awsExports, ssr: true });
 
@@ -54,20 +54,18 @@ async function handleCreatePost(event) {
 export default function Home({ posts = [] }) {
   return (
     <>
-      <Header />
-
       <div className={styles.container}>
         <Head>
           <title>Amplify + Next.js</title>
           <link rel="icon" href="/favicon.ico" />
-          {/* <link
+          <link
             href="https://d2qfs6i220e922.cloudfront.net/Video JS/VideoJS/video-js-v1.css"
             rel="stylesheet"
           />
           <link
             href="https://d2qfs6i220e922.cloudfront.net/Video JS/Transcript/videojs-transcript-v1.css"
             rel="stylesheet"
-          /> */}
+          />
         </Head>
 
         <main className={styles.main}>
@@ -76,7 +74,7 @@ export default function Home({ posts = [] }) {
           <CourseList />
 
           {/* https://www.npmjs.com/package/video.js */}
-          {/* <video
+          <video
             id="video1"
             name="c1-trailer"
             className="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
@@ -86,7 +84,7 @@ export default function Home({ posts = [] }) {
             data-setup='{ "playbackRates": [1, 1.25, 1.5, 1.75, 2] }'
           >
             <source src="https://d2qfs6i220e922.cloudfront.net/Why GIFTed/m3u8/Why GIFTed_V7_1.m3u8"></source>
-          </video> */}
+          </video>
 
           <p className={styles.description}>
             <code style={{ marginRight: 10 }}>{posts.length}</code>

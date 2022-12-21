@@ -1,6 +1,20 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const isUserEnrolled = /* GraphQL */ `
+  query isUserEnrolled($userId: ID, $courseSlug: String) {
+    listAssignments(
+      filter: {
+        user_id: { eq: $userId },
+        course_slug: { eq: $courseSlug }
+      }
+    ) {
+      items {
+        id
+      }
+    }
+  }
+`;
 export const getPost = /* GraphQL */ `
   query GetPost($id: ID!) {
     getPost(id: $id) {

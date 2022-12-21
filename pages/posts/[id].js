@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import awsExports from '../../src/aws-exports';
 import { deletePost } from '../../src/graphql/mutations';
-import { getPost, listPosts } from '../../src/graphql/queries';
+import { getPost } from '../../src/graphql/queries';
 import styles from '../../styles/Home.module.css';
 
 Amplify.configure({ ...awsExports, ssr: true });

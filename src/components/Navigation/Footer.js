@@ -114,6 +114,7 @@ export default function FooterLinks() {
       <Group position="center">
         <div className={classes.logo}>
           <Image
+            alt="GIFT-ed logo"
             width={70}
             height={70}
             fit="contain"

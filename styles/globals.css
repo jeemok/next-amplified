@@ -1,3 +1,7 @@
+@import '//vjs.zencdn.net/7.10.2/video-js.min.css';
+@import 'https://d2qfs6i220e922.cloudfront.net/Video JS/VideoJS/video-js-v1.css';
+@import 'https://d2qfs6i220e922.cloudfront.net/Video JS/Transcript/videojs-transcript-v1.css';
+
 html,
 body {
   padding: 0;

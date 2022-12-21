@@ -77,7 +77,7 @@ export default function NothingFoundBackground() {
         <Illustration className={classes.image} />
         <div className={classes.content}>
           <Title className={classes.title}>
-            hey, you're not supposed to be here
+            hey, you&apos;re not supposed to be here
           </Title>
           <Text
             color="dimmed"

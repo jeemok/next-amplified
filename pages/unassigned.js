@@ -56,6 +56,7 @@ export default function Unassigned() {
         breakpoints={[{ maxWidth: "sm", cols: 1, spacing: 40 }]}
       >
         <Image
+          alt="404 image"
           src={"https://ui.mantine.dev/_next/static/media/image.11cd6c19.svg"}
           className={classes.mobileImage}
         />
@@ -79,6 +80,7 @@ export default function Unassigned() {
           </Link>
         </div>
         <Image
+          alt="404 image"
           src={"https://ui.mantine.dev/_next/static/media/image.11cd6c19.svg"}
           className={classes.desktopImage}
         />

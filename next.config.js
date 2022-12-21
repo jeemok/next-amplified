@@ -4,12 +4,17 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'lms.gift-ed.com',
-        pathname: '/static/**',
+        protocol: "https",
+        hostname: "lms.gift-ed.com",
+        pathname: "/static/**",
       },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+module.exports = withBundleAnalyzer({});

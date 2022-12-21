@@ -1,6 +1,5 @@
 import Script from "next/script";
-import { Authenticator } from "@aws-amplify/ui-react";
-import { useAuthenticator } from "@aws-amplify/ui-react";
+import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react";
 import { MantineProvider } from "@mantine/core";
 import { useRouter } from "next/router";
 import "../styles/globals.css";
@@ -14,13 +13,12 @@ import { AppContextProvider, useAppContext } from "../src/contexts/global";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const { appTheme } = useAppContext();
+  const { authStatus } = useAuthenticator((context) => [context.authStatus]);
+  const isAuthenticated = authStatus === "authenticated";
 
   if (router.pathname === "/login") {
     return <Login />;
   }
-
-  const { authStatus } = useAuthenticator((context) => [context.authStatus]);
-  const isAuthenticated = authStatus === "authenticated";
 
   // Should probably move into route middleware once it is supported:
   // https://github.com/aws-amplify/amplify-js/issues/9145

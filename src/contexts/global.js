@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext(undefined);
 
 export function AppContextProvider({ children }) {
-  const [appTheme, setAppTheme] = useState({ colorScheme: "light" });
+  const [appTheme, setAppTheme] = useState({ colorScheme: "dark" });
   return (
     <AppContext.Provider value={{ appTheme, setAppTheme }}>
       {children}

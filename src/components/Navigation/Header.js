@@ -145,6 +145,7 @@ export default function HeaderTabs() {
           <Group position="apart">
             <Link href="/">
               <Image
+                alt="GIFT-ed logo"
                 width={60}
                 height={60}
                 fit="contain"

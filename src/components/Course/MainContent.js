@@ -13,7 +13,7 @@ import {
   UnstyledButton,
   TextInput,
 } from "@mantine/core";
-import VideoJS from '../Common/VideoJS';
+import VideoJS from "../Common/VideoJS";
 
 // TODO: Somehow dynamic import not working, placing it here first
 import Course3ReflectionRiskMap from "../CourseContent/DragAndDrop/course3-reflection1-riskmap";
@@ -32,7 +32,13 @@ export const MainContent = ({ content, onComplete }) => {
             style={{ verticalAlign: "middle", marginRight: 5 }}
           />
           <Text size="sm" style={{ display: "inline-block" }}>
-            <a href={content.link} target="_blank" style={{ color: "#df2644" }}>
+            <a
+              href={content.link}
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#df2644" }}
+            >
+              {" "}
               Download Transcript (PDF)
             </a>
           </Text>
@@ -113,6 +119,7 @@ export const MainContent = ({ content, onComplete }) => {
             <a
               href={content.podcasts.spotify}
               target="_blank"
+              rel="noreferrer"
               style={{ color: "#df2644" }}
             >
               Spotify
@@ -121,6 +128,7 @@ export const MainContent = ({ content, onComplete }) => {
             <a
               href={content.podcasts.anchor}
               target="_blank"
+              rel="noreferrer"
               style={{ color: "#df2644" }}
             >
               Anchor
@@ -129,6 +137,7 @@ export const MainContent = ({ content, onComplete }) => {
             <a
               href={content.podcasts.google}
               target="_blank"
+              rel="noreferrer"
               style={{ color: "#df2644" }}
             >
               Google Podcasts

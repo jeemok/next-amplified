@@ -44,7 +44,7 @@ const Legend = () => (
   </Card>
 );
 
-export default () => {
+export default function Container() {
   return (
     <Box>
       <table>

@@ -13,8 +13,8 @@ export { getServerSideProps };
 
 export function Chapter({ course, module, chapter, nextModule, nextChapter }) {
   const router = useRouter();
-  setUserLastCourse(router.asPath.split('?')[0]);
-  
+  setUserLastCourse(router.asPath.split("?")[0]);
+
   return (
     <>
       <Head>
@@ -49,8 +49,10 @@ export function Chapter({ course, module, chapter, nextModule, nextChapter }) {
   );
 }
 
-export default () => (
-  <CourseProviderHOC>
-    <Chapter />
-  </CourseProviderHOC>
-);
+export default function ChapterWrapper() {
+  return (
+    <CourseProviderHOC>
+      <Chapter />
+    </CourseProviderHOC>
+  );
+}

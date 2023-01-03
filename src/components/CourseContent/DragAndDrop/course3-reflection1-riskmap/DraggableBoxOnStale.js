@@ -32,7 +32,7 @@ const DraggableBoxOnStale = memo(function DraggableBoxOnStale(props) {
 
   useEffect(() => {
     preview(getEmptyImage(), { captureDraggingState: true });
-  }, []);
+  }, [preview]);
 
   return (
     <div

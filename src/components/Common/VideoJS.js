@@ -24,10 +24,12 @@ export const VideoJS = (props) => {
   const videoRef = React.useRef(null);
   const playerRef = React.useRef(null);
   // Somehow if we put `overlay` in `options`, videojs will not initiate properly
+  const { onEnded } = props;
   const { overlay, ...rest } = props.options;
-  const options = { ...DEFAULT_OPTIONS, ...rest };
 
   React.useEffect(() => {
+    const options = { ...DEFAULT_OPTIONS, ...rest };
+    
     // Make sure Video.js player is only initialized once
     if (!playerRef.current) {
       // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode.
@@ -49,7 +51,7 @@ export const VideoJS = (props) => {
         }
 
         // https://www.w3schools.com/tags/ref_av_dom.asp
-        player.on("ended", () => props.onEnded && props.onEnded());
+        player.on("ended", () => onEnded && onEnded());
       }));
 
       // You could update an existing player in the `else` block here
@@ -60,7 +62,7 @@ export const VideoJS = (props) => {
       player.autoplay(options.autoplay);
       player.src(options.sources);
     }
-  }, [options, videoRef]);
+  }, [options, videoRef, overlay, onEnded]);
 
   // Dispose the Video.js player when the functional component unmounts
   React.useEffect(() => {

@@ -14,6 +14,7 @@ export default function Downloads({ infographics }) {
           <a
             href={infographics.pdf}
             target="_blank"
+            rel="noreferrer"
             style={{ color: "#df2644" }}
           >
             PDF
@@ -22,13 +23,14 @@ export default function Downloads({ infographics }) {
           <a
             href={infographics.jpeg}
             target="_blank"
+            rel="noreferrer"
             style={{ color: "#df2644" }}
           >
             JPEG
           </a>
         </Group>
       </Text>
-      <Image src={infographics.jpeg} />
+      <Image alt="" src={infographics.jpeg} />
     </Box>
   );
 }

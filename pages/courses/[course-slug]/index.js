@@ -48,8 +48,10 @@ export function Course({ course }) {
   );
 }
 
-export default () => (
-  <CourseProviderHOC>
-    <Course />
-  </CourseProviderHOC>
-);
+export default function CourseWrapper() {
+  return (
+    <CourseProviderHOC>
+      <Course />
+    </CourseProviderHOC>
+  );
+}

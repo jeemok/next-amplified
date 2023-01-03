@@ -22,10 +22,12 @@ export async function getServerSideProps({ req }) {
   }
 }
 
-export default ({ ssrResults }) => {
+export default function ({ ssrResults }) {
   console.log("ssrResults: ", ssrResults);
   const handleClick = () => {
-    API.get("testapi", "/enrollments/enrollmentCheck", { query: { userId: 'test' }})
+    API.get("testapi", "/enrollments/enrollmentCheck", {
+      query: { userId: "test" },
+    })
       .then((result) => {
         console.log("result: ", result);
         console.log("JSON.parse(result.body)", JSON.parse(result.body));
@@ -40,4 +42,4 @@ export default ({ ssrResults }) => {
       <button onClick={handleClick}>Click to test</button>
     </div>
   );
-};
+}

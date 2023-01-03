@@ -23,7 +23,7 @@ const DroppableBox = ({ backgroundColor }) => {
   );
 };
 
-export default () => {
+export default function DragLayout() {
   const [boxes, setBoxes] = useState(
     DROPPABLE_BOXES.reduce((acc, cur) => {
       acc[cur.label] = cur;

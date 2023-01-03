@@ -26,10 +26,9 @@ export const VideoJS = (props) => {
   // Somehow if we put `overlay` in `options`, videojs will not initiate properly
   const { onEnded } = props;
   const { overlay, ...rest } = props.options;
+  const options = { ...DEFAULT_OPTIONS, ...rest };
 
   React.useEffect(() => {
-    const options = { ...DEFAULT_OPTIONS, ...rest };
-    
     // Make sure Video.js player is only initialized once
     if (!playerRef.current) {
       // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode.

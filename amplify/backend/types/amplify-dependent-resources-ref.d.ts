@@ -9,6 +9,11 @@ export type AmplifyDependentResourcesAttributes = {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"
+        },
+        "testapi": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
         }
     },
     "auth": {
@@ -27,6 +32,12 @@ export type AmplifyDependentResourcesAttributes = {
     },
     "function": {
         "AdminQueriesd4706564": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        },
+        "enrollmentLambda": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",

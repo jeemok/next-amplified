@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "../Common/LinkWrapper";
 import {
   createStyles,
   Container,
@@ -15,8 +16,8 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconSun, IconMoonStars } from "@tabler/icons";
 import { Auth } from "aws-amplify";
-import Link from "next/link";
 import { useAppContext } from "../../contexts/global";
+import { getUserLastCourse } from '../../services/cache';
 
 const LOGO_LIGHT = 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/xtnfh24s5duexxusw8il';
 const LOGO_DARK = 'https://lms.gift-ed.com/static/gifted_theme/images/logo.60ca24482602.png';
@@ -161,19 +162,20 @@ export default function HeaderTabs() {
                   size="md"
                   color={theme.colorScheme === "dark" ? "gray" : "dark"}
                   onLabel={
-                    <IconSun
-                      size={16}
-                      stroke={2.5}
-                      color={theme.colors.yellow[4]}
-                    />
-                  }
-                  offLabel={
                     <IconMoonStars
                       size={16}
                       stroke={2.5}
                       color={theme.colors.blue[6]}
                     />
                   }
+                  offLabel={
+                    <IconSun
+                      size={16}
+                      stroke={2.5}
+                      color={theme.colors.yellow[7]}
+                    />
+                  }
+                  checked={appTheme.colorScheme === 'dark'}
                   onChange={(e) =>
                     setAppTheme((state) => ({
                       ...state,
@@ -226,8 +228,8 @@ export default function HeaderTabs() {
               </UnstyledButton>
             </Menu.Target>
             <Menu.Dropdown>
-              <Menu.Item>Resume your last course</Menu.Item>
-              <Menu.Item>Dashboard</Menu.Item>
+              <Menu.Item><Link href={getUserLastCourse()}>Resume your last course</Link></Menu.Item>
+              <Menu.Item><Link href="/">Dashboard</Link></Menu.Item>
               <Menu.Item>Profile</Menu.Item>
               <Menu.Item>Account</Menu.Item>
               <Menu.Item onClick={() => Auth.signOut()}>Sign Out</Menu.Item>

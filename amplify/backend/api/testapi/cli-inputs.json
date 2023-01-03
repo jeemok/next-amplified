@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/enrollments": {
+      "name": "/enrollments",
+      "lambdaFunction": "enrollmentLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -1,14 +1,17 @@
-import Script from "next/script";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react";
 import { MantineProvider } from "@mantine/core";
-import { useRouter } from "next/router";
-import "../styles/globals.css";
-import "@aws-amplify/ui-react/styles.css";
+import { NotificationsProvider } from "@mantine/notifications";
+
 import Login from "./login";
 import Unauthorised from "./unauthorised";
 import Header from "./../src/components/Navigation/Header";
 import Footer from "./../src/components/Navigation/Footer";
 import { AppContextProvider, useAppContext } from "../src/contexts/global";
+
+import "../styles/globals.css";
+import "@aws-amplify/ui-react/styles.css";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -37,24 +40,29 @@ function MyApp({ Component, pageProps }) {
         primaryColor: "red",
       }}
     >
-      <Header />
-      {/* Videojs script */}
-      <Script src="//vjs.zencdn.net/7.10.2/video.min.js" />
-      {/* Content */}
-      <Component {...pageProps} />
-      {/* Footer */}
-      <Footer />
+      <NotificationsProvider>
+        <Header />
+        {/* Content */}
+        <Component {...pageProps} />
+        {/* Footer */}
+        <Footer />
+      </NotificationsProvider>
     </MantineProvider>
   );
 }
 
 function AuthenticationWrapper(props) {
   return (
-    <Authenticator.Provider>
-      <AppContextProvider>
-        <MyApp {...props} />
-      </AppContextProvider>
-    </Authenticator.Provider>
+    <>
+      <Head>
+        <title>GIFT.ed</title>
+      </Head>
+      <Authenticator.Provider>
+        <AppContextProvider>
+          <MyApp {...props} />
+        </AppContextProvider>
+      </Authenticator.Provider>
+    </>
   );
 }
 

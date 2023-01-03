@@ -1,0 +1,11 @@
+{
+  "httpMethod": "GET",
+  "path": "/enrollments/enrollmentCheck",
+  "queryStringParameters": {
+    "userId": "53a4300f-8a95-4334-b989-8466390e28c1",
+    "courseSlug": "why-the-21st-century-will-surprise-us-reshaping-capitalism"
+  },
+  "headers": {
+    "Content-Type": "application/json"
+  }
+}

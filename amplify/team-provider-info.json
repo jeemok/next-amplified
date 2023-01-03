@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-nextamplified-dev-161253-unauthRole",
       "StackName": "amplify-nextamplified-dev-161253",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:492457871890:stack/amplify-nextamplified-dev-161253/1c2b8910-7b87-11ed-a680-02d34d24dbb6",
-      "AmplifyAppId": "d2qgl9zrr6t4py"
+      "AmplifyAppId": "d2qgl9zrr6t4py",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-nextamplified-dev-161253-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -18,7 +19,8 @@
       },
       "api": {
         "nextamplified": {},
-        "AdminQueries": {}
+        "AdminQueries": {},
+        "testapi": {}
       },
       "hosting": {
         "amplifyhosting": {
@@ -30,6 +32,32 @@
         "AdminQueriesd4706564": {
           "deploymentBucketName": "amplify-nextamplified-dev-161253-deployment",
           "s3Key": "amplify-builds/AdminQueriesd4706564-74796a66505531687843-build.zip"
+        },
+        "nextamplified4598466f": {
+          "deploymentBucketName": "amplify-nextamplified-dev-161253-deployment",
+          "s3Key": "amplify-builds/nextamplified4598466f-4c31744c594536324d62-build.zip"
+        },
+        "enrollmentLambda": {
+          "deploymentBucketName": "amplify-nextamplified-dev-161253-deployment",
+          "s3Key": "amplify-builds/enrollmentLambda-5264426a2b4d4553464c-build.zip"
+        }
+      },
+      "storage": {
+        "Postmrhsgmtbovbq5ehlwoxujhygpydev": {
+          "tableName": "Post-mrhsgmtbovbq5ehlwoxujhygpy-dev",
+          "region": "ap-southeast-1",
+          "arn": "arn:aws:dynamodb:ap-southeast-1:492457871890:table/Post-mrhsgmtbovbq5ehlwoxujhygpy-dev",
+          "streamArn": "arn:aws:dynamodb:ap-southeast-1:492457871890:table/Post-mrhsgmtbovbq5ehlwoxujhygpy-dev/stream/2022-12-14T08:53:07.342",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "Assignmentmrhsgmtbovbq5ehlwoxujhygpydev": {
+          "tableName": "Assignment-mrhsgmtbovbq5ehlwoxujhygpy-dev",
+          "region": "ap-southeast-1",
+          "arn": "arn:aws:dynamodb:ap-southeast-1:492457871890:table/Assignment-mrhsgmtbovbq5ehlwoxujhygpy-dev",
+          "streamArn": "arn:aws:dynamodb:ap-southeast-1:492457871890:table/Assignment-mrhsgmtbovbq5ehlwoxujhygpy-dev/stream/2022-12-19T07:33:01.236",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
         }
       }
     }

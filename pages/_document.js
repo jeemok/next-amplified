@@ -9,7 +9,9 @@ export default class _Document extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="icon" href="https://lms.gift-ed.com/favicon.ico" />
+        </Head>
         <body>
           <Main />
           <NextScript />

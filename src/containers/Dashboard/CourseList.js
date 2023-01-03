@@ -1,52 +1,22 @@
 import React from "react";
 import { Group } from "@mantine/core";
 import CourseCard from "../../components/Dashboard/CourseCard";
-
-const items = [
-  {
-    slug: "getting-started-with-gift-ed",
-    image:
-      "https://lms.gift-ed.com/asset-v1:GIFT.ed+Orientation+V1+type@asset+block@gifted-logo-white.jpg",
-    title: "Getting Started with GIFT.ed",
-    duration: "3h 16m",
-    progress: 0,
-  },
-  {
-    image:
-      "https://lms.gift-ed.com/asset-v1:GIFT.ed+Course3+V1+type@asset+block@C3_-_Trailer_TN2.png",
-    title: "Why the 21st Century Will Surprise Us: Reshaping Capitalism",
-    duration: "5h 17m",
-    progress: 33,
-  },
-  {
-    image:
-      "https://lms.gift-ed.com/asset-v1:GIFT.ed+Course1+V1+type@asset+block@C1_Promo_TN1.jpg",
-    title: "Redesigning Society: Global Challenges and Purpose Driven Lives",
-    duration: "1h 12m",
-    progress: 75,
-  },
-  {
-    image:
-      "https://lms.gift-ed.com/asset-v1:GIFT.ed+C2+V1+type@asset+block@C2-Trailer-TN1.png",
-    title: "Anticipating the World in 2050: Designing Resilient Societies",
-    duration: "3h 10m",
-    progress: 100,
-  },
-];
+import courses from "../../../data";
 
 export default function CourseList() {
   return (
     <Group>
-      {items.map(({ image, slug, title, duration, progress }, index) => (
-        <CourseCard
-          key={title}
-          slug={slug}
-          image={image}
-          title={title}
-          duration={duration}
-          progress={progress}
-        />
-      ))}
+      {React.Children.toArray(
+        courses.map(({ image, slug, title, duration, progress }) => (
+          <CourseCard
+            slug={slug}
+            image={image}
+            title={title}
+            duration={duration}
+            progress={progress}
+          />
+        ))
+      )}
     </Group>
   );
 }

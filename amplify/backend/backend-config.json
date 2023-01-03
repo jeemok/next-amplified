@@ -138,11 +138,6 @@
         }
       ]
     },
-    "nextamplified4598466f": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
     "enrollmentLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
